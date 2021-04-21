@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 
 class Review extends Component {
-
+  
   render() {
-    const { review } = this.props;
-
     return (
       <div>
         <li>
-          {review.text}
+          {this.props.text}
         </li>
-        <button> X </button>
+        <button id={this.props.id} onClick={e => this.props.delete(e.target.id)}> X </button>
       </div>
     );
   }
